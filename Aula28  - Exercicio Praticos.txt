@@ -1,0 +1,44 @@
+/*
+//Descricao:calculadora imc
+//Autor:Gabriel Peres
+//Data: 26/02/2024
+
+*/
+
+ float peso = 78;
+ float altura = 1.85;
+ float resultado = 24.84;
+ float IMC = 0;
+void setup()
+{
+Serial.begin(9600);
+  
+  resultado = (float)altura * (float)altura;
+  Serial.print("altura ao quadrado eh: ");
+  Serial.println(resultado);
+  
+  
+  IMC = peso / resultado;
+  Serial.print("o calculo do imc eh: ");
+  Serial.println(IMC);
+ 
+  if (resultado < 18.5) {
+  Serial.println ("voce esta abaixo do peso");
+  }else if (resultado >=18.5 && resultado <=24.9){
+  Serial.println ("vc esta no peso normal");
+  }else if (resultado >=25 && resultado <=29.9){
+  Serial.println ("vc esta em exesso de peso");
+  }else if (resultado >=30 && resultado <=34.9){
+  Serial.println ("voce esta na obesidade clase 1");
+  }else if (resultado >=35 && resultado <=39.9){
+  Serial.println ("voce esta na obesidade clase2");
+  }else{
+  Serial.println("voce esta na obesidade clase3");
+} 
+}
+
+void loop()
+{
+ 
+}
+  
