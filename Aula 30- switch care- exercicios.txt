@@ -1,0 +1,64 @@
+/*exercicios switch case 
+Autor:Gabriel Peres
+Data:6/03/2025
+*/
+#define pinLedVermelho 13
+#define pinLedAmarelo 12
+#define pinLedVerde 11
+#define pinLedAzul 10
+#define pinLedBranco 9
+void setup()
+{
+  pinMode(pinLedVermelho, OUTPUT);
+  pinMode(pinLedAmarelo, OUTPUT);
+  pinMode(pinLedVerde, OUTPUT);
+  pinMode(pinLedAzul, OUTPUT);
+
+
+int escolha =2;
+
+
+ switch(escolha)
+    
+{ 
+   case 0:
+   digitalWrite(pinLedVermelho, HIGH);
+   Serial.println("pessimo");
+   break;
+    
+    
+   case 1:
+   digitalWrite(pinLedAmarelo, HIGH);
+   Serial.println("ruim");
+   break;
+     
+     
+    case 2:
+    digitalWrite(pinLedVerde, HIGH);
+    Serial.println("normal");
+    break;
+   
+   
+   case 3:
+   digitalWrite(pinLedAzul, HIGH);
+   Serial.println("boa");
+   break;
+
+   case 4:
+   digitalWrite(pinLedBranco, HIGH);
+   Serial.println("exelente");
+   break;
+     
+   default:
+   Serial.println("erro");
+   break;
+   
+ }
+  
+  
+  
+}
+void loop()
+{
+  
+}
