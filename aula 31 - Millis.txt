@@ -1,0 +1,43 @@
+
+/*exercicios 
+Autor:Gabriel Peres
+Data:7/03/2025
+*/
+ 
+#define pinLedVermelho 13
+#define pinLedAzul 9
+
+unsigned long tempoAtual;
+
+long tempoDecorrido = 0;
+long tempoDecorridoII = 0;
+
+long tempoLedVermelho = 400;
+long tempoLedAzul = 500;
+
+
+void setup()
+{
+  
+  pinMode(pinLedVermelho, OUTPUT);
+  pinMode(pinLedAzul, OUTPUT);
+  
+}
+
+void loop()
+{
+  
+  tempoAtual = millis();
+  
+  if(tempoAtual - tempoDecorrido > tempoLedVermelho) {
+    tempoDecorrido = tempoAtual;
+    digitalWrite(pinLedVermelho, !digitalRead(pinLedVermelho));
+  }
+  
+  
+  if(tempoAtual - tempoDecorridoII > tempoLedAzul) {
+    tempoDecorridoII = tempoAtual;
+    digitalWrite(pinLedAzul, !digitalRead(pinLedAzul));
+  }
+  
+}
