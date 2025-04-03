@@ -1,0 +1,24 @@
+#include <Arduino.h>
+float hipotenusa(float , float);
+
+void setup()
+{
+  Serial.begin(9600);
+  float resultadoDasoma = hipotenusa(4, 3);
+  Serial.print(resultadoDasoma);  
+
+}
+
+void loop()
+{
+ 
+
+}
+
+float hipotenusa(int numeroA, int numeroB) 
+{
+  float resultado =sq(numeroA)+ sq(numeroB);  
+  float resultadoReal = 0;
+  resultadoReal = sqrt(resultado);
+  return resultadoReal;  
+}
