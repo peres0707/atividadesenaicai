@@ -1,0 +1,46 @@
+#include <Arduino.h>
+
+// prototipo de funcoes` : vc define em primeiro as suas funcoes para nao dar erro no vaid setup e no vaid loop 
+void ligaLed(int pin);
+void desligaLed(int pin);
+void piscaLed(int pin, unsigned long tempo);
+int somaDeDoisN(int numeroA, int numeroB);
+
+void setup()
+{
+  pinMode(2, OUTPUT); // define se o pino e entrada ou saida 
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  piscaLed(2, 100);  // define o numero do led e o tempo dentro da funcao 
+  Serial.print(somaDeDoisN(4, 8)); // define quais numeros devem somar 
+}
+
+void ligaLed(int pin)    //  funcao como vazia ,ligaLed da variavel interira 
+{
+  digitalWrite(pin, HIGH);// liga o led 
+}
+
+void desligaLed(int pin) //  funcao como vazia que retorna um led desligado em uma variavel intera 
+{
+  digitalWrite(pin, LOW); //desliga o led 
+}
+
+void piscaLed(int pin, unsigned long tempo  // colcar a funcao como vazia 
+
+{
+  ligaLed(pin); // liga o led que define no pin
+  delay(tempo); // trava a programacao por um tempo inderteminado 
+  desligaLed(pin); // desliga o led que define do pin 
+  delay(tempo); //trava a programacao por um tempo inderteminado 
+
+}
+
+int somaDeDoisN(int numeroA, int numeroB) // uma funcao inteira que retorna uma soma de uma variavel inteira
+{
+  int resultado = numeroA + numeroB; // variavel tipo inteira ,esta fazendo a conta dos dois numeros 
+
+  return resultado;  // ele retorna so o resultado 
+}
